@@ -1432,62 +1432,62 @@ $(function() {
 
 
 
-    // // 测试数据
-    // var wxInfo = {
-    //     "openid": "o47Fa0mp9SRTf3eiKmqWm69BjG_8",
-    //     "nickname": "齐齐",
-    //     "sex": 0,
-    //     "language": "zh_CN",
-    //     "city": "梅州",
-    //     "province": "广东",
-    //     "country": "CN",
-    //     "headimgurl": "http://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83eosQg0XAQxOgzO02ap9KjlxOuzJVs4u4E8c8cRpuiawuH2uQcc33TTXjlrDgSA9pMxxha9csjc6piaQ/132",
-    //     "privilege": []
-    // };
-    // allStartFun(wxInfo);
-    // return;
+    // 测试数据
+    var wxInfo = {
+        "openid": "o47Fa0mp9SRTf3eiKmqWm69BjG_8",
+        "nickname": "齐齐",
+        "sex": 0,
+        "language": "zh_CN",
+        "city": "梅州",
+        "province": "广东",
+        "country": "CN",
+        "headimgurl": "http://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83eosQg0XAQxOgzO02ap9KjlxOuzJVs4u4E8c8cRpuiawuH2uQcc33TTXjlrDgSA9pMxxha9csjc6piaQ/132",
+        "privilege": []
+    };
+    allStartFun(wxInfo);
+    return;
 
 
-    // 获取微信用户信息
-    if( OPENID ){
-        var redirect_uri = 'https://h5.xhangjia.com/2018/09/1809_srtds/index.html?openid='+OPENID+'&personNum='+personNum;
-    }else{
-        var redirect_uri = 'https://h5.xhangjia.com/2018/09/1809_srtds/index.html';
-    }
-    var oauth2Url = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxd950f35d1f20806a&redirect_uri=" + redirect_uri + "&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect";
-    if(localStorages.Get("nlpUserInfo")){
-        var info = JSON.parse(localStorages.Get("nlpUserInfo"));
-        if(info && info.headimgurl){
-            allStartFun(info);
-        }else{
-            window.location.href = oauth2Url;
-        }
-    }else{
-        if (getQueryString("code")) {
-            var code = getQueryString("code");
-            $.ajax({
-                url: 'api/user.php',
-                type: 'GET',
-                dataType: 'json',
-                data: { code: code },
-                success: function(res) {
-                  if(res.headimgurl){
-                    localStorages.Set("nlpUserInfo",JSON.stringify(res));
-                    allStartFun(res);
-                  }else{
-                    window.location.href = oauth2Url;
-                  }
-                }                
-            });
-        }else{
-          var info = JSON.parse(localStorages.Get("nlpUserInfo"));
-          if(info && info.headimgurl){
-            allStartFun(info);
-          }else{
-            window.location.href = oauth2Url;
-          }
-        }
-    }
+    // // 获取微信用户信息
+    // if( OPENID ){
+    //     var redirect_uri = 'https://h5.xhangjia.com/2018/09/1809_srtds/index.html?openid='+OPENID+'&personNum='+personNum;
+    // }else{
+    //     var redirect_uri = 'https://h5.xhangjia.com/2018/09/1809_srtds/index.html';
+    // }
+    // var oauth2Url = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxd950f35d1f20806a&redirect_uri=" + redirect_uri + "&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect";
+    // if(localStorages.Get("nlpUserInfo")){
+    //     var info = JSON.parse(localStorages.Get("nlpUserInfo"));
+    //     if(info && info.headimgurl){
+    //         allStartFun(info);
+    //     }else{
+    //         window.location.href = oauth2Url;
+    //     }
+    // }else{
+    //     if (getQueryString("code")) {
+    //         var code = getQueryString("code");
+    //         $.ajax({
+    //             url: 'api/user.php',
+    //             type: 'GET',
+    //             dataType: 'json',
+    //             data: { code: code },
+    //             success: function(res) {
+    //               if(res.headimgurl){
+    //                 localStorages.Set("nlpUserInfo",JSON.stringify(res));
+    //                 allStartFun(res);
+    //               }else{
+    //                 window.location.href = oauth2Url;
+    //               }
+    //             }                
+    //         });
+    //     }else{
+    //       var info = JSON.parse(localStorages.Get("nlpUserInfo"));
+    //       if(info && info.headimgurl){
+    //         allStartFun(info);
+    //       }else{
+    //         window.location.href = oauth2Url;
+    //       }
+    //     }
+    // }
 
 
 });
