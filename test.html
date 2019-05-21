@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="x5-orientation" content="landscape">
+    <script type="text/javascript">
+        var docEl = document.documentElement, Size = docEl.clientWidth / (750 / 40); 
+        docEl.style.fontSize = Size + 'px'; 
+        if(Size >= 25){ 
+            Size = 20;
+            docEl.style.fontSize = '20px';
+        }
+    </script>
+</head>
+<body>
+
+<script>
+    localStorage.clear();
+
+    OPENID = 1;
+    function wxShare(title, content, url){
+        console.log(content);
+    }
+
+
+    //随机范围数
+    function rd(n,m){
+        var c = m-n+1; 
+        return Math.floor(Math.random() * c + n);
+    }
+
+    function shareText(num){
+        if( num > 300 ){
+            var txtArr = ['恭喜!此景点人流量帮你完成了一次完美挤压瘦身!','欢迎来到我的朋友圈看“人山人”海','这么挤，你一定狠抗压吧!'];
+            wxShare('数鸭子', txtArr[rd(0,2)], 'https://h5.xhangjia.com/2018/09/1809_srtds/index.html?openid='+OPENID+'&personNum='+num);
+        }else if(num > 199){
+            var txtArr = ['真正的猛士，敢于在黄金周勇敢走出家门!','运气不算太差，至少在榜单排名上可以说是很优秀了','摩拳擦掌就是每移动一米，就要摩擦 10 个人的手掌'];
+            wxShare('数鸭子', txtArr[rd(0,2)], 'https://h5.xhangjia.com/2018/09/1809_srtds/index.html?openid='+OPENID+'&personNum='+num);
+        }else if(num > 150){
+            var txtArr = ['曾经跨过山和大海，却跨不过人山人海','拍脑袋吉尼斯记录入围作品','有缘千里来相会之你在我对面却被人流冲散'];
+            wxShare('数鸭子', txtArr[rd(0,2)], 'https://h5.xhangjia.com/2018/09/1809_srtds/index.html?openid='+OPENID+'&personNum='+num);
+        }else if(num > 99){
+            var txtArr = ['大家好，介绍一下这是旅游认识的百来号兄弟','珍惜眼前的人从众海，毕竟万里相见的缘分不易','你选的景点人多到可以称得上世界第九大奇迹了!'];
+            wxShare('数鸭子', txtArr[rd(0,2)], 'https://h5.xhangjia.com/2018/09/1809_srtds/index.html?openid='+OPENID+'&personNum='+num);
+        }else if(num > 80){
+            var txtArr = ['激动，马上就可以集齐108个兄弟了','这么多人选搭讪成功率一定高!把握好时机少年!','仿佛下一秒，就要踩到前面人的脚'];
+            wxShare('数鸭子', txtArr[rd(0,2)], 'https://h5.xhangjia.com/2018/09/1809_srtds/index.html?openid='+OPENID+'&personNum='+num);
+        }else if(num > 50){
+            var txtArr = ['茫茫人海不过百，要不你再举高点试试?','这是一条靠镜头人数称霸的朋友圈','如果有背景乐，可以一起为祖国蹦个“庆生迪”了!'];
+            wxShare('数鸭子', txtArr[rd(0,2)], 'https://h5.xhangjia.com/2018/09/1809_srtds/index.html?openid='+OPENID+'&personNum='+num);
+        }else if(num > 10){
+            wxShare('数鸭子', '巧妙躲过国庆黄金周高峰人流量的旅行王者', 'https://h5.xhangjia.com/2018/09/1809_srtds/index.html?openid='+OPENID+'&personNum='+num);
+        }else if(num > 5){
+            wxShare('数鸭子', '没有人山人海吵吵闹闹，就这样安安静静，挺好', 'https://h5.xhangjia.com/2018/09/1809_srtds/index.html?openid='+OPENID+'&personNum='+num);
+        }else if(num > 2){
+            wxShare('数鸭子', '哇~人这么少的地方都被找到了，真是个小机灵鬼', 'https://h5.xhangjia.com/2018/09/1809_srtds/index.html?openid='+OPENID+'&personNum='+num);
+        }else if(num > 0){
+            wxShare('数鸭子', '如果不是约好的熟人，这缘分可以加个好友了', 'https://h5.xhangjia.com/2018/09/1809_srtds/index.html?openid='+OPENID+'&personNum='+num);
+        }else{
+            wxShare('数鸭子', '风光无限好，只是没有人?????', 'https://h5.xhangjia.com/2018/09/1809_srtds/index.html?openid='+OPENID+'&personNum='+num);
+        }
+    }
+
+shareText(77);
+
+</script>
+</body>
+</html>

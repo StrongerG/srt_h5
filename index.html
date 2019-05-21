@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>"人从众𠈌杯"拍脑袋大赛</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="x5-orientation" content="landscape">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="css/default-skin/default-skin.css">
+    <link rel="stylesheet" type="text/css" href="css/photoswipe.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css?v=00000343">
+    <script type="text/javascript">
+        var docEl = document.documentElement, Size = docEl.clientWidth / (750 / 40); 
+        docEl.style.fontSize = Size + 'px'; 
+        if(Size >= 25){ 
+            Size = 20;
+            docEl.style.fontSize = '20px';
+        }
+    </script>
+</head>
+<body>
+    
+
+    <!-- 旋转屏幕提示代码 portrait [[ -->
+    <div id="orientation_hinter" class="landscape">
+        <div class="hinter_phone"><i></i></div>
+        <div class="hinter_rotate"></div>
+        <div class="hinter_text landscape">切换手机竖屏模式</div>
+        <div class="hinter_text portrait">切换手机横屏模式</div>
+    </div> 
+    <!-- 旋转屏幕提示代码 ]] -->
+    <div class="music">
+        <audio src="https://img.xhangjia.com/h5/2018/09/1809_srtds/music.mp3" loop="loop" id="Music" style="display:none;"></audio>
+        <div class="music_icon"></div>
+    </div>
+    
+    <div class="loading-spinner">
+        <span>正在加载中，请稍后</span>
+    </div>
+
+    
+    
+
+    <!-- 页面开始 -->
+    <div class="wrap">
+        
+        
+        <div class="page loading" style="display:-block;">
+            <div class="page-in">
+                <div class="lp-icon">
+                    <img src="https://img.xhangjia.com/h5/2018/09/1809_srtds/loading.png" style="display:none;">
+                    <p>小鸭极速加载中..</p>
+                </div>
+                <!-- <div class="lp-text"><span>0</span>%</div> -->
+            </div>
+        </div><!--loading-->
+
+        <div id="playVideo">
+            <div class="play_icon"></div>
+        </div>
+        
+        <div class="page page1" style="display:-block;">
+            <div class="page-in">
+                <div id="video_jump"></div>
+                <div class="videobox">
+                    <video 
+                        id="videoALL" 
+                        class="video"
+                        src="https://img.xhangjia.com/h5/2018/09/1809_srtds/start.mp4?v=1" 
+                        poster="" 
+                        preload="auto" 
+                        webkit-playsinline="true" 
+                        playsinline="true" 
+                        x-webkit-playsinline="true"
+                        x-webkit-airplay="allow" 
+                        x5-video-player-type="h5" 
+                        x5-video-player-fullscreen="true" 
+                        style="object-fit: fill;object-position: center center;">
+                    </video> 
+                </div>
+            </div>
+        </div><!--page1-->
+
+        <div class="page page2" style="display:-block;">
+            <div class="page-in">
+                <div class="p2-inner">
+
+                    <!-- 人物和鸭子放置区 -->
+                    <div class="people-and-duck">
+
+                        <div class="pad-people-wrap">
+                            <div class="pad-01 pad-pic pani-pic"></div>
+                            <div class="pad-02 pad-pic"></div><!--山-->
+                            <div class="pad-20 pad-pic pani-pic"></div>
+                            <div class="pad-15 pad-pic pani-pic"></div>
+                            <div class="pad-16 pad-pic pani-pic"></div>
+                            <div class="pad-03 pad-pic pani-pic"></div>
+                            <div class="pad-04 pad-pic pani-pic"></div>
+                            <div class="pad-05 pad-pic pani-pic"></div>
+
+                            <div class="pad-28 pad-pic"></div>
+                            
+                            <div class="pad-06 pad-pic pani-pic"></div>
+                            <div class="pad-07 pad-pic pani-pic"></div>
+                            <div class="pad-08 pad-pic pani-pic"></div>
+                            <div class="pad-09 pad-pic pani-pic"></div>
+                            <div class="pad-10 pad-pic pani-pic"></div>
+                            <div class="pad-11 pad-pic pani-pic"></div>
+                            <div class="pad-12 pad-pic pani-pic"></div>
+
+                            <div class="pad-30 pad-pic"></div>
+
+                            <div class="pad-13 pad-pic pani-pic"></div>
+                            <div class="pad-14 pad-pic pani-pic"></div>
+                            <div class="pad-17 pad-pic pani-pic"></div>
+                            <div class="pad-21 pad-pic pani-pic"></div>
+                            <div class="pad-19 pad-pic pani-pic"></div>
+                            <div class="pad-22 pad-pic pani-pic"></div>
+                            <div class="pad-23 pad-pic pani-pic"></div>
+                            
+                            <div class="pad-29 pad-pic"></div>
+
+                            <div class="pad-24 pad-pic pani-pic"></div>
+                            <div class="pad-25 pad-pic pani-pic"></div>
+                            <div class="pad-18 pad-pic pani-pic"></div>
+                        </div>
+
+                        <div class="pad-duck-wrap">
+                            <!-- 鸭子 -->
+                            <div class="pad-26 pad-pic pad-duck"></div>
+                            <div class="pad-27 pad-pic pad-duck"></div>
+                            <!-- 鸭子的对话框 -->
+                            <div class="pad-31 pad-pic pad-duck"></div>
+                            <div class="pad-32 pad-pic pad-duck"></div>
+                        </div>
+
+                    </div><!--people-and-duck-->
+
+                    <div class="p2-02"></div>
+                    <div class="p2-01"></div>
+                    <div class="p2-04" id="p2_btn"></div>
+                </div>
+            </div>
+        </div><!--page2-->
+
+        <div class="page page3" style="display:-block;">
+            <div class="page-in">
+                <div class="p3-inner">
+                    <div class="p3-05"></div>
+                    <div class="p3-01"></div>
+                    <div class="p3-02"></div>
+                    <div class="p3-04"></div>
+                    <div class="p3-03"></div>
+                    <div class="p3-06 clearfix">
+                        <div class="clearfix">
+                            <div class="p306-01 fl">
+                                <img src="" class="headimgurl">
+                            </div>
+                            <div class="p306-02 fl">
+                                <span>
+                                    <input type="text" id="name" placeholder="点击输入姓名" maxlength="5">
+                                </span>
+                            </div>   
+                        </div> 
+                        <div class="p3-07">
+                            <span>
+                                <input type="text" id="address" placeholder="点击输入地点名" maxlength="8">
+                            </span>
+                        </div>                      
+                    </div>
+                    <div class="p3-08">上传景区照，百度大脑帮你查查拍到了多少个脑袋</div>
+                    <div class="p3-09" id="p3_btn"> </div>
+                </div>
+            </div>
+        </div><!--page3-->
+
+        <!-- 图片裁剪页 -->
+        <div class="page page-clip">
+            <div id="clipArea"></div>
+            <input type="file" id="upFile" accept="image/*"/>
+            <div class="pc-btn">
+                <p>请将照片缩小至虚线框内裁剪</p>
+                <a href="javascript:;" id="cancelBtn">取 消</a>
+                <a href="javascript:;" id="clipBtn">确 定</a>
+            </div>
+        </div><!--page-clip-->
+
+        <!-- 分享文件生成 -->
+        <div id="container"></div>
+
+        <div class="page page4" style="display:-block;">
+            <div class="page-in">
+                <div class="p4-inner">
+                    <div class="p4-i-bg"></div>
+                    <div class="p4-i-head">
+                        <div class="p4ih-bg"></div>
+                        <div class="p4ih-01"></div>
+                        <div class="p4ih-02"></div>
+                        <div class="p4ih-03"></div>
+                    </div>
+                    <!-- 分享图片放置区 -->
+                    <div class="p4-i-con">
+                        <div class="p4ih-04"></div>
+
+                        <!-- 生成的分享图片 -->
+                        <img src="" id="canvasImg">
+
+                        <div class="p4ic-01">超越<span class="beyond"> </span>人的作品</div>
+                        <div class="p4ic-02">
+                            <img src="" id="clipPic">
+                        </div>
+                        <div class="p4ic-03">
+                            <div class="p4ic3-01-w fl">
+                                <div class="p4ic3-01">
+                                    <img src="" class="headimgurl">
+                                </div>
+                            </div>
+                            <div class="p4ic3-03 fl">
+                                <h5 class="nameText"> </h5>
+                                <div class="people-text">和TA拍到的<span><i class="peopleNum"> </i>个脑袋</span></div>
+                                <p class="addressText"></p>
+                            </div>
+                        </div>
+                        <div class="p4ic-04" id="word_copy"></div>
+                        <div class="p4ic-05">
+                            <div class="p4ic05-lt p4ic05-ltgt">- 拍不到50个脑袋的，就不要拿给本鸭数了 -</div>
+                            <div class="p4ic05-gt p4ic05-ltgt">
+                                    拍照角度和光照都会影响本鸭数脑袋 <br>
+                                    - 结果有误差？上传更多照片帮本大脑更聪明 -
+                            </div>
+                        </div>
+                    </div><!--p4-i-con-->
+                    <div class="p4-i-04"></div>
+                    <div class="p4-i-05"></div>
+                    <div class="p4-i-btn">
+                        <div class="p4ib-01" id="p4_btn1"></div>
+                        <div class="p4ib-02" id="p4_btn2"></div>
+                        <div class="p4ib-04" id="p4_btn4"></div>
+                        <div class="p4ib-03"></div>
+                    </div>
+                </div>
+            </div>
+        </div><!--page4-->
+        
+
+        <div class="page page5" style="display:-block;">
+            <div class="page-in">
+                <div class="p5-inner">
+                    <div class="p5-i-bg"></div>
+                    <div class="p5-01"></div>
+                    <div class="p5-i-con">
+                        <div class="p5ic-h"></div>
+                        <div class="p5ic-c p5ic-c1">
+                            <ul class="p5icc-list p5icc-list1 photoswipe">
+                                
+                            </ul>
+                        </div>
+                    </div><!--p5-i-con-->   
+                    <div class="p5-02">
+                        <div class="p502-01">
+                            <img src="" class="headimgurl">
+                        </div>
+                        <div class="p502-02">
+                            <h5><span class="nameText"> </span>在<span class="addressText"> </span></h5>
+                            <p class="people-text2">拍到了<span class="peopleNum"> </span>个有缘人的脑袋</p>
+                            <p>凭着这份缘冲到了大赛榜单第<span class="ranking"> </span>名</p>
+                        </div>
+                    </div>
+                    <div class="p5-03"></div>
+                    <div class="p5-i-btn">
+                        <div class="p5ib-01" id="p5_btn1"></div>
+                        <div class="p5ib-02" id="p5_btn2"></div>
+                        <div class="p5ib-03"></div>
+                    </div>
+                </div>
+            </div>
+        </div><!--page5-->
+
+
+        <div class="page page6" style="display:-block;">
+            <div class="page-in">
+                <div class="p5-inner">
+                    <div class="p5-i-bg"></div>
+                    <div class="p5-01"></div>
+                    <div class="p5-i-con">
+                        <div class="p5ic-h"></div>
+                        <div class="p5ic-c p5ic-c2">
+                            <ul class="p5icc-list p5icc-list2 photoswipe">
+                                
+                            </ul>
+                        </div>
+                    </div><!--p5-i-con-->   
+                    <div class="p5-02">
+                        <div class="p502-01">
+                            <img src="" class="headimgurlo">
+                        </div>
+                        <div class="p502-02">
+                            <h5><span class="nameTexto"> </span>在<span class="addressTexto"> </span></h5>
+                            <p class="people-texto">拍到了<span class="peopleNumo"> </span>个有缘人的脑袋</p>
+                            <p>凭着这份缘冲到了大赛榜单第<span class="rankingo"> </span>名</p>
+                        </div>
+                    </div>
+                    <div class="p5-03"></div>
+                    <div class="p5-i-btn">
+                        <div class="p5ib-04" id="p5_btn4"></div>
+                        <div class="p5ib-03"></div>
+                    </div>
+                </div>
+            </div>
+        </div><!--page6-->
+
+
+
+        <!-- 弹层 -->
+        <div class="page share-page">
+            <div class="sp-icon"></div>
+        </div><!--share-page-->
+
+        <div class="page ts-page">
+            <div class="ts-pic">
+                <div class="ts-icon"></div>
+            </div>
+        </div><!--share-page-->
+
+    </div><!--wrap-->   
+
+
+
+
+
+
+
+    <!-- 图片组件必须的DOM元素 Root element of PhotoSwipe. Must have class pswp. -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+        <!-- Background of PhotoSwipe. 
+             It's a separate element, as animating opacity is faster than rgba(). -->
+        <div class="pswp__bg"></div>
+        <!-- Slides wrapper with overflow:hidden. -->
+        <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+        <!-- don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader-active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- 二维码生成 -->
+    <div id="qrcode"></div>
+
+
+<script src="//res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="https://img.xhangjia.com/h5/2018/09/1809_srtds/jquery-1.11.2.min.js"></script>
+<script src="https://unpkg.com/qiniu-js@2.1.2/dist/qiniu.min.js"></script>
+<script src="js/hammer.min.js"></script>
+<script src="js/iscroll-zoom-min.js"></script>
+<script src="js/lrz.all.bundle.js"></script>
+<script src="js/PhotoClip.js"></script>
+<script src="js/spritejs.min.js"></script>
+<script src="js/photoswipe-ui-default.min.js"></script>
+<script src="js/photoswipe.min.js"></script>
+<script src="js/qrcode.min.js"></script>
+<script src="js/txt.js"></script>
+<script src="js/index.js?v=00000343"></script>
+<script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?29fe37985b5cd2a341e821b85502b2fe";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+ 
+<!-- <script src="https://cdn.bootcss.com/vConsole/3.2.0/vconsole.min.js"></script>
+<script>
+    var vConsole = new VConsole();
+</script>  -->
+
+</body>
+</html>
